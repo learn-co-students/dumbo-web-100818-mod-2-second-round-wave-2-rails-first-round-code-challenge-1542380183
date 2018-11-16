@@ -1,0 +1,9 @@
+<h1><%= @vendor.name %></h1>
+<h3>Vendor's Sweets:</h3>
+<ol>
+<% @vendor.sweets.each do |sweet| %>
+<li>
+<%= sweet.name %><br>
+</li>
+<% end %>
+</ol>
