@@ -10,3 +10,10 @@
     <%= link_to sweet.name, sweet %>
     <br>
 <% end %>
+
+<%= form_for @vendor_sweet do |f| %>
+  <%= f.hidden_field :vendor_id, value: @vendor.id%>
+  <%= f.label :sweet_id %>
+  <%= f.collection_select :sweet_id, @allsweets, :id, :name %>
+  <%= f.submit %>
+<% end %>

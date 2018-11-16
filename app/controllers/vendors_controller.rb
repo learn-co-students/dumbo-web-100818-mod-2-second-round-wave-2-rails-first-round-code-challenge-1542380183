@@ -7,8 +7,10 @@ class VendorsController < ApplicationController
   def show
     @vendor = Vendor.find(params[:id])
     @sweets = @vendor.sweets
+    @allsweets = Sweet.all
+    @vendor_sweet = VendorSweet.new
   end
 
-  
+
 
 end
